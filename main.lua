@@ -274,3 +274,52 @@ Badge2:AddButton({
 			 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.workspace.Lobby.brazil.portal.CFrame
 	 end
 })
+
+Badge2:AddButton({
+	Name = "Auto-Get Bob Plushie",
+	Callback = function()
+if game:GetService("ReplicatedStorage").RepressedMemoriesMap then
+game.ReplicatedStorage.RepressedMemoriesMap.Parent = game.Workspace
+wait(1)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace.RepressedMemories._ugcQuestObjectBobPlushie.Handle.CFrame
+wait(0.5)
+fireclickdetector(workspace.RepressedMemories._ugcQuestObjectBobPlushie.ClickDetector)
+wait(2)
+game.Workspace.RepressedMemoriesMap.Parent = game.ReplicatedStorage
+else
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace.RepressedMemories._ugcQuestObjectBobPlushie.Handle.CFrame
+wait(0.7)
+fireclickdetector(workspace.RepressedMemories._ugcQuestObjectBobPlushie.ClickDetector)
+wait(2)
+game.Workspace.RepressedMemoriesMap.Parent = game.ReplicatedStorage
+end
+	end
+})
+
+Badge2:AddButton({
+	Name = "Auto-Get Alchemist Hood",
+	Callback = function()
+game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Credits",Text = "script by nexer" ,Duration = 1000, Icon = "rbxthumb://type=Asset&id=9649923610&w=150&h=150",Button1 = "OK"})
+wait(1)
+local teleportFunc = queueonteleport or queue_on_teleport
+if teleportFunc then
+    teleportFunc([[
+        if not game:IsLoaded() then
+            game.Loaded:Wait()
+        end
+wait(1)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace._ugcQuestObjectEludeHat.Handle.CFrame
+wait(0.5)
+fireclickdetector(workspace._ugcQuestObjectEludeHat.ClickDetector)
+wait(1)
+game:GetService("StarterGui"):SetCore("SendNotification",{Title = "hey",Text = "yo brotha you got this artifact" ,Duration = 1000, Icon = "rbxthumb://type=Asset&id=9649923610&w=150&h=150",Button1 = "yippe"})
+wait(5)
+game:GetService("StarterGui"):SetCore("SendNotification",{Title = "serious warning",Text = "yo im teleporting you back" ,Duration = 1000, Icon = "rbxthumb://type=Asset&id=9649923610&w=150&h=150",Button1 = "pls nooo"})
+wait(3)
+game:GetService("TeleportService"):Teleport(6403373529)
+	]])
+end	
+game:GetService("TeleportService"):Teleport(11828384869)
+	 end
+})
+
