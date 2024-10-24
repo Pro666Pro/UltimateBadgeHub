@@ -33,6 +33,12 @@ local Badge2 = Window:MakeTab({
 	PremiumOnly = false
 })
 
+local Badge4 = Window:MakeTab({
+	Name = "In-Place Only Section",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
 local Badge3 = Window:MakeTab({
 	Name = "Teleport Section",
 	Icon = "rbxassetid://4483345998",
