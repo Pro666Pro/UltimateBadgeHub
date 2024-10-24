@@ -830,6 +830,20 @@ game:GetService("TeleportService"):Teleport(7234087065)
   	end    
 })
 
+Badge2:AddButton({
+	Name = "Auto Get Bind { No Alchemist Required } ",
+	Callback = function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/Pro666Pro/bind/main/main.lua'))()
+  	end    
+})
+
+Badge2:AddButton({
+	Name = "Auto Get Poltergeist",
+	Callback = function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/Pro666Pro/AutoGetPoltergeist/main/main.lua'))()
+  	end    
+})
+
 Badge4:AddToggle({
 	Name = "Farm Trap { slow, using ability 1x faster }",
     Default = false,
