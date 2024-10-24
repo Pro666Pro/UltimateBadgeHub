@@ -84,7 +84,7 @@ Badge6:AddButton({
 Badge6:AddButton({
 	Name = "Copy Serverhop All Orbs + Slapples + Toolbox Farming { PUT INTO AUTOEXEC }",
 	Callback = function()
-			 setclipboard(tostring("loadstring(game:HttpGet('https://raw.githubusercontent.com/Pro666Pro/GravestoneFinder/main/main.lua'))()"))
+			 setclipboard(tostring("serverhop = true loadstring(game:HttpGet('https://raw.githubusercontent.com/Pro666Pro/autofarm-serverhop/main/main.lua'))()"))
 			 OrionLib:MakeNotification({Name = "Copied!",Content = "Copied script to clipboard",Image = "rbxassetid://7733658504",Time = 5})
 	 end
 })
@@ -1051,5 +1051,12 @@ Badge5:AddButton({
     Name = "Give Fake Badge",
     Callback = function()
 game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Badge Awarded",Text = ""..game.Players.LocalPlayer.Character.Name.." won Slap Battles's ''".._G.BadgeName.."'' award!" ,Duration = 5, Icon = "rbxthumb://type=Asset&id=206410289&w=150&h=150"})
+    end
+})
+
+Badge5:AddButton({
+    Name = "Give All Fake Badges",
+    Callback = function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/Pro666Pro/getallbadges_fake/main/main.lua'))()
     end
 })
