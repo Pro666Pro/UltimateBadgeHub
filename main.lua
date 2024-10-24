@@ -34,7 +34,7 @@ local Badge2 = Window:MakeTab({
 })
 
 local Badge4 = Window:MakeTab({
-	Name = "In-Place Only Section",
+	Name = "Farm Section",
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
@@ -45,13 +45,158 @@ local Badge3 = Window:MakeTab({
 	PremiumOnly = false
 })
 
+local Badge5 = Window:MakeTab({
+	Name = "Other Section",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local Badge6 = Window:MakeTab({
+	Name = "Auto-Farm Section",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Badge6:AddButton({
+	Name = "Copy Serverhop Slapples Farming { PUT INTO AUTOEXEC }",
+	Callback = function()
+			 setclipboard(tostring("loadstring(game:HttpGet('https://raw.githubusercontent.com/Pro666Pro/slapfarming/main/main.lua'))()"))
+			 OrionLib:MakeNotification({Name = "Copied!",Content = "Copied script to clipboard",Image = "rbxassetid://7733658504",Time = 5})
+	 end
+})
+
+Badge6:AddButton({
+	Name = "Copy Serverhop Boxer Farming { PUT INTO AUTOEXEC }",
+	Callback = function()
+			 setclipboard(tostring("GhostInvis = true AdminInvis = false SlappleFarm = true CandyFarm = false loadstring(game:HttpGet('https://raw.githubusercontent.com/Pro666Pro/BoxerFarmUpgraded/main/main.lua'))()"))
+			 OrionLib:MakeNotification({Name = "Copied!",Content = "Copied script to clipboard",Image = "rbxassetid://7733658504",Time = 5})
+	 end
+})
+
+Badge6:AddButton({
+	Name = "Copy Serverhop Candy Farming { PUT INTO AUTOEXEC }",
+	Callback = function()
+			 setclipboard(tostring("loadstring(game:HttpGet('https://raw.githubusercontent.com/Pro666Pro/CandyFarm/main/main.lua'))()"))
+			 OrionLib:MakeNotification({Name = "Copied!",Content = "Copied script to clipboard",Image = "rbxassetid://7733658504",Time = 5})
+	 end
+})
+
+Badge6:AddButton({
+	Name = "Copy Serverhop All Orbs + Slapples + Toolbox Farming { PUT INTO AUTOEXEC }",
+	Callback = function()
+			 setclipboard(tostring("loadstring(game:HttpGet('https://raw.githubusercontent.com/Pro666Pro/GravestoneFinder/main/main.lua'))()"))
+			 OrionLib:MakeNotification({Name = "Copied!",Content = "Copied script to clipboard",Image = "rbxassetid://7733658504",Time = 5})
+	 end
+})
+
+Badge6:AddButton({
+	Name = "Copy Serverhop Gravestone Finder { PUT INTO AUTOEXEC }",
+	Callback = function()
+			 setclipboard(tostring("loadstring(game:HttpGet('https://raw.githubusercontent.com/Pro666Pro/GravestoneFinder/main/main.lua'))()"))
+			 OrionLib:MakeNotification({Name = "Copied!",Content = "Copied script to clipboard",Image = "rbxassetid://7733658504",Time = 5})
+	 end
+})
+
 Badge3:AddButton({
 	Name = "Teleport To Baseplate",
 	Callback = function()
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace["Baseplate"].CFrame * CFrame.new(0,10,0)
 	end    
 })
-		
+
+Badge3:AddButton({
+	Name = "Lobby",
+	Callback = function()
+			 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-800,328,-2.5)
+	 end
+})
+
+Badge3:AddButton({
+	Name = "Arena",
+	Callback = function()
+			 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.workspace.Origo.CFrame * CFrame.new(0,-5,0)
+	 end
+})
+
+Badge3:AddButton({
+	Name = "Default Arena",
+	Callback = function()
+			 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(120,360,-3)
+	 end
+})
+
+Badge3:AddButton({
+	Name = "Tournament",
+	Callback = function()
+			 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Battlearena.Arena.CFrame * CFrame.new(0,10,0)
+	 end
+})
+
+Badge3:AddButton({
+	Name = "Island 1",
+	Callback = function()
+			 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-211.210846, -5.27827597, 4.13719559, -0.0225322824, 1.83683113e-08, -0.999746144, -1.83560154e-08, 1, 1.87866842e-08, 0.999746144, 1.87746618e-08, -0.0225322824)
+	 end
+})
+
+Badge3:AddButton({
+	Name = "Island 2",
+	Callback = function()
+			 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-8.17191315, -5.14452887, -205.249741, -0.98216176, -3.48867246e-09, -0.188037917, -4.19987778e-09, 1, 3.38382322e-09, 0.188037917, 4.11319823e-09, -0.98216176)
+	 end
+})
+
+Badge3:AddButton({
+	Name = "Island 3",
+	Callback = function()
+			 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-6.66747713, -5.06731462, 213.575378, 0.945777893, 2.52095178e-10, 0.324814111, -3.7823856e-08, 1, 1.09357536e-07, -0.324814111, -1.15713661e-07, 0.945777893)
+	 end
+})
+
+Badge3:AddButton({
+	Name = "Moai Island",
+	Callback = function()
+			 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(215, -15.5, 0.5)
+	 end
+})
+
+Badge3:AddButton({
+	Name = "Slapple Island",
+	Callback = function()
+			 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.workspace.Arena.island5.Union.CFrame * CFrame.new(0,3.25,0)
+	 end
+})
+
+Badge3:AddButton({
+	Name = "Plate",
+	Callback = function()
+			 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").Arena.Plate.CFrame
+	 end
+})
+
+Badge3:AddButton({
+	Name = "Cannon Island",
+	Callback = function()
+			 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Arena.CannonIsland.Cannon.Base.CFrame * CFrame.new(0,0,35)
+	 end
+})
+
+Badge3:AddButton({
+	Name = "Cube Of Death",
+	Callback = function()
+			 if game.Workspace:FindFirstChild("the cube of death(i heard it kills)", 1) then
+			 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace.Arena.CubeOfDeathArea["the cube of death(i heard it kills)"].Part.CFrame * CFrame.new(0,5,0)
+			 end
+	 end
+})
+
+Badge3:AddButton({
+	Name = "Brazil Portal",
+	Callback = function()
+			 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.workspace.Lobby.brazil.portal.CFrame
+	 end
+})
+
 Badge:AddButton({
 	Name = "Get Cake Mix For Firework",
 	Callback = function()
@@ -69,7 +214,7 @@ Badge:AddButton({
 })
 
 Badge2:AddButton({
-	Name = "Auto-Get Plank { use in lobby }",
+	Name = "Auto-Get Plank",
 	Callback = function()
 			 if game.Players.LocalPlayer.leaderstats.Glove.Value == "Fort" then
 			 OGL = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
@@ -149,6 +294,15 @@ Badge2:AddButton({
 	Name = "Auto-Get Rubber Ducky",
 	Callback = function()
 			 fireclickdetector(game.Workspace.Arena["default island"]["Rubber Ducky"].ClickDetector)
+	 end
+})
+
+Badge2:AddButton({
+	Name = "Auto-Get Rubber Ducky & Lonely Orange & Court Evidence",
+	Callback = function()
+			 fireclickdetector(game.Workspace.Arena["default island"]["Rubber Ducky"].ClickDetector)
+			 fireclickdetector(game.Workspace.Arena.island5.Orange.ClickDetector)
+			 fireclickdetector(game.Workspace.Lobby.Scene.knofe.ClickDetector)
 	 end
 })
 
@@ -312,9 +466,9 @@ game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace._ugc
 wait(0.5)
 fireclickdetector(workspace._ugcQuestObjectEludeHat.ClickDetector)
 wait(1)
-game:GetService("StarterGui"):SetCore("SendNotification",{Title = "hey",Text = "yo brotha you got this artifact" ,Duration = 1000, Icon = "rbxthumb://type=Asset&id=9649923610&w=150&h=150",Button1 = "yippe"})
+game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Error",Text = "Alchemist Hood Acquired" ,Duration = 1000, Icon = "rbxthumb://type=Asset&id=9649923610&w=150&h=150",Button1 = "yippe"})
 wait(5)
-game:GetService("StarterGui"):SetCore("SendNotification",{Title = "serious warning",Text = "yo im teleporting you back" ,Duration = 1000, Icon = "rbxthumb://type=Asset&id=9649923610&w=150&h=150",Button1 = "pls nooo"})
+game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Error",Text = "Yo im teleporting you back" ,Duration = 1000, Icon = "rbxthumb://type=Asset&id=9649923610&w=150&h=150",Button1 = "pls nooo"})
 wait(3)
 game:GetService("TeleportService"):Teleport(6403373529)
 	]])
@@ -337,7 +491,7 @@ firetouchinterest(game.Players.LocalPlayer.Character:WaitForChild("Head"), works
 until game.Players.LocalPlayer.Character:FindFirstChild("entered")
 end
 wait(0.2)
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace["SafeBox"].CFrame * CFrame.new(0,5,0)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace["Baseplate"].CFrame * CFrame.new(0,10,0)
 end
 game:GetService("StarterGui"):SetCore("SendNotification",{Title = "warning",Text = "you can get kicked if u afk for 20 mins, i dont have anti afk feature, so yeah" ,Duration = 1000, Icon = "rbxthumb://type=Asset&id=4567880251&w=150&h=150",Button1 = "nah bro add anti afk script plez"})
 game:GetService("StarterGui"):SetCore("SendNotification",{Title = "warning",Text = "you can get kicked if u afk for 20 mins, i dont have anti afk feature, so yeah" ,Duration = 1000, Icon = "rbxthumb://type=Asset&id=4567880251&w=150&h=150",Button1 = "nah bro add anti afk script plez"})
@@ -347,7 +501,7 @@ game:GetService("StarterGui"):SetCore("SendNotification",{Title = "warning",Text
 })
 
 
-GetBadges:AddButton({
+Badge2:AddButton({
 	Name = "Auto Get Fish { use in lobby }",
 	Callback = function()
 if game.Players.LocalPlayer.leaderstats.Glove.Value == "ZZZZZZZ" and game.Players.LocalPlayer.Character:FindFirstChild("entered") == nil then
@@ -359,7 +513,7 @@ firetouchinterest(game.Players.LocalPlayer.Character:WaitForChild("Head"), works
 until game.Players.LocalPlayer.Character:FindFirstChild("entered")
 end
 wait(0.2)
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace["SafeBox"].CFrame * CFrame.new(0,5,0)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace["Baseplate"].CFrame * CFrame.new(0,10,0)
 wait(0.2)
 game:GetService("ReplicatedStorage").ZZZZZZZSleep:FireServer()
 wait(0.1)
@@ -371,7 +525,7 @@ end
 	 end
 })
 
-GetBadges:AddButton({
+Badge2:AddButton({
 	Name = "Auto Get Voodoo + Fish { use in lobby }",
 	Callback = function()
 if game.Players.LocalPlayer.leaderstats.Glove.Value == "Ghost" and game.Players.LocalPlayer.Character:FindFirstChild("entered") == nil then
@@ -386,7 +540,7 @@ firetouchinterest(game.Players.LocalPlayer.Character:WaitForChild("Head"), works
 until game.Players.LocalPlayer.Character:FindFirstChild("entered")
 end
 wait(0.2)
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace["SafeBox"].CFrame * CFrame.new(0,5,0)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace["Baseplate"].CFrame * CFrame.new(0,10,0)
 wait(0.2)
 game:GetService("ReplicatedStorage").ZZZZZZZSleep:FireServer()
 game:GetService("StarterGui"):SetCore("SendNotification",{Title = "warning",Text = "you can get kicked if u afk for 20 mins, i dont have anti afk feature, so yeah" ,Duration = 1000, Icon = "rbxthumb://type=Asset&id=4567880251&w=150&h=150",Button1 = "nah bro add anti afk script plez"})
@@ -397,7 +551,7 @@ end
 	 end
 })
 
-GetBadges:AddButton({
+Badge2:AddButton({
 	Name = "Auto Get MEGAROCK { use in lobby }",
 	Callback = function()
 if game.Players.LocalPlayer.leaderstats.Glove.Value == "Diamond" and game.Players.LocalPlayer.Character:FindFirstChild("entered") == nil then
@@ -417,4 +571,485 @@ game:GetService("StarterGui"):SetCore("SendNotification",{Title = "warning",Text
 game:GetService("StarterGui"):SetCore("SendNotification",{Title = "warning",Text = "you can get kicked if u afk for 20 mins, i dont have anti afk feature, so yeah" ,Duration = 1000, Icon = "rbxthumb://type=Asset&id=4567880251&w=150&h=150",Button1 = "nah bro add anti afk script plez"})
 end
 	 end
+})
+
+Badge2:AddButton({
+	Name = "Auto Get Frostbite",
+	Callback = function()
+game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Credits",Text = "Script By Nexer1234" ,Duration = 1000, Icon = "rbxthumb://type=Asset&id=4567880251&w=150&h=150",Button1 = "yipee"})
+local teleportFunc = queueonteleport or queue_on_teleport
+    if teleportFunc then
+        teleportFunc([[
+            if not game:IsLoaded() then
+                game.Loaded:Wait()
+            end
+            repeat wait() until game.Players.LocalPlayer
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-554, 177, 56)
+wait(0.7)
+for i,v in ipairs(game:GetService("Workspace"):GetDescendants()) do
+            if v.ClassName == "ProximityPrompt" then
+                fireproximityprompt(v)
+		game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Credits",Text = "You Got Frostbite!!!" ,Duration = 1000, Icon = "rbxthumb://type=Asset&id=4567880251&w=150&h=150",Button1 = "yipee"})
+            end
+        end
+]])
+end
+game:GetService("TeleportService"):Teleport(17290438723)
+  	end    
+})
+
+Badge2:AddButton({
+	Name = "Auto Get Glove Admin",
+	Callback = function()
+game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Credits",Text = "Script By Nexer1234" ,Duration = 1000, Icon = "rbxthumb://type=Asset&id=4567880251&w=150&h=150",Button1 = "yipee"})
+local teleportFunc = queueonteleport or queue_on_teleport
+    if teleportFunc then
+        teleportFunc([[
+            if not game:IsLoaded() then
+                game.Loaded:Wait()
+            end
+            repeat wait() until game.Players.LocalPlayer
+wait(13.5)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(502, 76, 59)
+task.wait(6)
+if getconnections then
+for i,v in next, getconnections(game.Players.LocalPlayer.Idled) do
+v:Disable() 
+end
+end
+game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Credits",Text = "Anti-AFK Enabled (i think so)" ,Duration = 1000, Icon = "rbxthumb://type=Asset&id=4567880251&w=150&h=150",Button1 = "yipee"})
+]])
+end
+if game:GetService("ReplicatedStorage").Assets.Retro then
+game.ReplicatedStorage.Assets.Retro.Parent = workspace
+wait(1.5)
+fireclickdetector(workspace.Retro.Map.RetroObbyMap:GetChildren()[5].StaffApp.Button.ClickDetector)
+else
+fireclickdetector(workspace.Retro.Map.RetroObbyMap:GetChildren()[5].StaffApp.Button.ClickDetector)
+end
+  	end    
+})
+
+Badge2:AddButton({
+	Name = "Auto Get Elude",
+	Callback = function()
+game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Credits",Text = "Script By Nexer1234" ,Duration = 1000, Icon = "rbxthumb://type=Asset&id=4567880251&w=150&h=150",Button1 = "yipee"})
+local teleportFunc = queueonteleport or queue_on_teleport
+if teleportFunc then
+    teleportFunc([[
+        if not game:IsLoaded() then
+            game.Loaded:Wait()
+        end
+	wait(3)
+firetouchinterest(game:GetService("Players").LocalPlayer.Character:FindFirstChild("HumanoidRootPart"), game.Workspace.Ruins.Elude.Glove, 0)
+firetouchinterest(game:GetService("Players").LocalPlayer.Character:FindFirstChild("HumanoidRootPart"), game.Workspace.Ruins.Elude.Glove, 1)
+game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Credits",Text = "You Got Elude!!!" ,Duration = 1000, Icon = "rbxthumb://type=Asset&id=4567880251&w=150&h=150",Button1 = "yipee"})
+    ]])
+end
+game:GetService("TeleportService"):Teleport(11828384869)
+	end
+})
+
+Badge2:AddButton({
+	Name = "Auto Get Counter",
+	Callback = function()
+game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Credits",Text = "Script By Nexer1234" ,Duration = 1000, Icon = "rbxthumb://type=Asset&id=4567880251&w=150&h=150",Button1 = "yipee"})
+local teleportFunc = queueonteleport or queue_on_teleport
+if teleportFunc then
+    teleportFunc([[
+        if not game:IsLoaded() then
+            game.Loaded:Wait()
+        end
+        repeat wait() until game.Players.LocalPlayer
+        wait(3)
+Time = 121
+fireclickdetector(game.Workspace.CounterLever.ClickDetector)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(0,100,0)
+wait(0.2)
+game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
+for i = 1,Time do
+Time = Time - 1
+game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Error",Text = "Wait [ "..Time.." ] seconds to get counter glove.",Icon = "rbxassetid://7733658504",Duration = 1})
+wait(1)
+end
+game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false
+wait(0.5)
+for i,v in pairs(workspace.Maze:GetDescendants()) do
+if v:IsA("ClickDetector") then
+fireclickdetector(v)
+end
+end
+game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Credits",Text = "You Got Counter!!!" ,Duration = 1000, Icon = "rbxthumb://type=Asset&id=4567880251&w=150&h=150",Button1 = "yipee"})
+    ]])
+end
+game:GetService("TeleportService"):Teleport(11828384869)
+	end
+})
+
+Badge2:AddButton({
+	Name = "Auto Get Counter + Elude",
+	Callback = function()
+game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Credits",Text = "Script By Nexer1234" ,Duration = 1000, Icon = "rbxthumb://type=Asset&id=4567880251&w=150&h=150",Button1 = "yipee"})
+local teleportFunc = queueonteleport or queue_on_teleport
+if teleportFunc then
+    teleportFunc([[
+        if not game:IsLoaded() then
+            game.Loaded:Wait()
+        end
+        repeat wait() until game.Players.LocalPlayer
+        wait(3)
+Time = 121
+fireclickdetector(game.Workspace.CounterLever.ClickDetector)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(0,100,0)
+wait(0.2)
+game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
+for i = 1,Time do
+Time = Time - 1
+game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Error",Text = "Wait [ "..Time.." ] seconds to get counter + elude glove.",Icon = "rbxassetid://7733658504",Duration = 1})
+wait(1)
+end
+game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false
+wait(0.5)
+firetouchinterest(game:GetService("Players").LocalPlayer.Character:FindFirstChild("HumanoidRootPart"), game.Workspace.Ruins.Elude.Glove, 0)
+firetouchinterest(game:GetService("Players").LocalPlayer.Character:FindFirstChild("HumanoidRootPart"), game.Workspace.Ruins.Elude.Glove, 1)
+for i,v in pairs(workspace.Maze:GetDescendants()) do
+if v:IsA("ClickDetector") then
+fireclickdetector(v)
+end
+end
+game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Credits",Text = "You Got Elude & Counter!!!" ,Duration = 1000, Icon = "rbxthumb://type=Asset&id=4567880251&w=150&h=150",Button1 = "yipee"})
+    ]])
+end
+game:GetService("TeleportService"):Teleport(11828384869)
+	end
+})
+
+Badge2:AddButton({
+	Name = "Auto Get Fan",
+	Callback = function()
+game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Credits",Text = "Script By Nexer1234" ,Duration = 1000, Icon = "rbxthumb://type=Asset&id=4567880251&w=150&h=150",Button1 = "yipee"})
+wait(1)
+local teleportFunc = queueonteleport or queue_on_teleport
+if teleportFunc then
+    teleportFunc([[
+        if not game:IsLoaded() then
+            game.Loaded:Wait()
+        end
+game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Credits",Text = "Script By Nexer1234" ,Duration = 1000, Icon = "rbxthumb://type=Asset&id=4567880251&w=150&h=150",Button1 = "yipee"})
+wait(1)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(247.56419372558594, -265.0000305175781, -370.77752685546875)
+wait(0.5)
+game:GetService("ReplicatedStorage").RemoteEvents.SuitUpClown:FireServer()
+wait(0.1)
+game:GetService("ReplicatedStorage").RemoteEvents.KeyQuest:FireServer()
+wait(0.1)
+game:GetService("ReplicatedStorage").RemoteEvents.KeyAcquired:FireServer()
+wait(0.1)
+game:GetService("ReplicatedStorage").RemoteEvents.GOHOME:FireServer()
+wait(0.1)
+game:GetService("ReplicatedStorage").RemoteEvents.KeyBadgeReward:FireServer()
+wait(0.1)
+game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Credits",Text = "You Got Fan!!!" ,Duration = 1000, Icon = "rbxthumb://type=Asset&id=4567880251&w=150&h=150",Button1 = "yipee"})
+wait(1)
+game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Teleporting",Text = "Teleporting you back to slap battles!" ,Duration = 1000, Icon = "rbxthumb://type=Asset&id=9649923610&w=150&h=150",Button1 = "OK"})
+wait(1)
+game:GetService("TeleportService"):Teleport(6403373529)
+	]])
+end	
+game:GetService("TeleportService"):Teleport(7234087065)
+  	end    
+})
+
+Badge2:AddButton({
+	Name = "Auto Get Boxer",
+	Callback = function()
+game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Credits",Text = "Script By Nexer1234" ,Duration = 1000, Icon = "rbxthumb://type=Asset&id=4567880251&w=150&h=150",Button1 = "yipee"})
+wait(1)
+local teleportFunc = queueonteleport or queue_on_teleport
+if teleportFunc then
+    teleportFunc([[
+        if not game:IsLoaded() then
+            game.Loaded:Wait()
+        end
+game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Credits",Text = "Script By Nexer1234" ,Duration = 1000, Icon = "rbxthumb://type=Asset&id=4567880251&w=150&h=150",Button1 = "yipee"})
+wait(1)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(4231.26123046875, 3505.86376953125, 270.4519958496094)
+wait(0.5)
+fireclickdetector(workspace.BoxingGloves.ClickDetector)
+wait(1)
+game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Credits",Text = "You Got Boxer!!!" ,Duration = 1000, Icon = "rbxthumb://type=Asset&id=4567880251&w=150&h=150",Button1 = "yipee"})
+wait(1)
+game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Teleporting",Text = "Teleporting you back to slap battles!" ,Duration = 1000, Icon = "rbxthumb://type=Asset&id=9649923610&w=150&h=150",Button1 = "OK"})
+wait(1)
+game:GetService("TeleportService"):Teleport(6403373529)
+	]])
+end	
+game:GetService("TeleportService"):Teleport(7234087065)
+  	end    
+})
+
+Badge2:AddButton({
+	Name = "Auto Get Fan + Boxer",
+	Callback = function()
+game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Credits",Text = "Script By Nexer1234" ,Duration = 1000, Icon = "rbxthumb://type=Asset&id=4567880251&w=150&h=150",Button1 = "yipee"})
+wait(1)
+local teleportFunc = queueonteleport or queue_on_teleport
+if teleportFunc then
+    teleportFunc([[
+        if not game:IsLoaded() then
+            game.Loaded:Wait()
+        end
+game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Credits",Text = "Script By Nexer1234" ,Duration = 1000, Icon = "rbxthumb://type=Asset&id=4567880251&w=150&h=150",Button1 = "yipee"})
+wait(1)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(247.56419372558594, -265.0000305175781, -370.77752685546875)
+wait(0.5)
+game:GetService("ReplicatedStorage").RemoteEvents.SuitUpClown:FireServer()
+wait(0.1)
+game:GetService("ReplicatedStorage").RemoteEvents.KeyQuest:FireServer()
+wait(0.1)
+game:GetService("ReplicatedStorage").RemoteEvents.KeyAcquired:FireServer()
+wait(0.1)
+game:GetService("ReplicatedStorage").RemoteEvents.GOHOME:FireServer()
+wait(0.1)
+game:GetService("ReplicatedStorage").RemoteEvents.KeyBadgeReward:FireServer()
+wait(0.1)
+game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Credits",Text = "You Got Fan!!!" ,Duration = 1000, Icon = "rbxthumb://type=Asset&id=4567880251&w=150&h=150",Button1 = "yipee"})
+wait(1)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(4231.26123046875, 3505.86376953125, 270.4519958496094)
+wait(0.5)
+fireclickdetector(workspace.BoxingGloves.ClickDetector)
+wait(1)
+game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Credits",Text = "You Got Boxer!!!" ,Duration = 1000, Icon = "rbxthumb://type=Asset&id=4567880251&w=150&h=150",Button1 = "yipee"})
+wait(1)
+game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Teleporting",Text = "Teleporting you back to slap battles!" ,Duration = 1000, Icon = "rbxthumb://type=Asset&id=9649923610&w=150&h=150",Button1 = "OK"})
+wait(1)
+game:GetService("TeleportService"):Teleport(6403373529)
+	]])
+end	
+game:GetService("TeleportService"):Teleport(7234087065)
+  	end    
+})
+
+Badge4:AddToggle({
+	Name = "Farm Trap { slow, using ability 1x faster }",
+    Default = false,
+	Callback = function(Value)
+    trap1 = Value
+while trap1 == true do
+game:GetService("ReplicatedStorage").lbrick:FireServer()
+game:GetService("Players").LocalPlayer.PlayerGui.BRICKCOUNT.ImageLabel.TextLabel.Text = game:GetService("Players").LocalPlayer.PlayerGui.BRICKCOUNT.ImageLabel.TextLabel.Text + 1
+wait(5)
+end
+  	end    
+})
+
+Badge4:AddToggle({
+	Name = "Farm Trap { fast, using ability 3x faster }",
+    Default = false,
+	Callback = function(Value)
+    trap2 = Value
+while trap2 == true do
+game:GetService("ReplicatedStorage").lbrick:FireServer()
+game:GetService("Players").LocalPlayer.PlayerGui.BRICKCOUNT.ImageLabel.TextLabel.Text = game:GetService("Players").LocalPlayer.PlayerGui.BRICKCOUNT.ImageLabel.TextLabel.Text + 1
+wait(2)
+end
+  	end    
+})
+
+Badge4:AddToggle({
+	Name = "Farm Trap { real fast, using ability 5x faster }",
+    Default = false,
+	Callback = function(Value)
+    trap3 = Value
+while trap3 == true do
+game:GetService("ReplicatedStorage").lbrick:FireServer()
+game:GetService("Players").LocalPlayer.PlayerGui.BRICKCOUNT.ImageLabel.TextLabel.Text = game:GetService("Players").LocalPlayer.PlayerGui.BRICKCOUNT.ImageLabel.TextLabel.Text + 1
+wait(1.15)
+end
+  	end    
+})
+
+Badge4:AddToggle({
+	Name = "Farm Trap { fastest, using ability 5.2x faster, can kick you sometimes}",
+    Default = false,
+	Callback = function(Value)
+    trap3 = Value
+while trap3 == true do
+game:GetService("ReplicatedStorage").lbrick:FireServer()
+game:GetService("Players").LocalPlayer.PlayerGui.BRICKCOUNT.ImageLabel.TextLabel.Text = game:GetService("Players").LocalPlayer.PlayerGui.BRICKCOUNT.ImageLabel.TextLabel.Text + 1
+wait(1.05)
+end
+  	end    
+})
+
+Badge4:AddToggle({
+	Name = "Farm Toolbox",
+	Callback = function(Value)
+			Toolboxfarm = Value
+			while Toolboxfarm do
+			if game.Workspace:FindFirstChild("Toolbox") then
+			for i,v in pairs(game.Workspace:GetDescendants()) do
+                    			if v.Name == "Toolbox" and v:FindFirstChild("ClickDetector") then
+			fireclickdetector(v.ClickDetector, 0)
+			fireclickdetector(v.ClickDetector, 1)
+                    			end
+                			end
+            			end
+			task.wait()
+			end
+	 end
+})
+
+Badge4:AddToggle({
+	Name = "Farm Jet Orb",
+	Callback = function(Value)
+			_G.Jetfarm = Value
+			while _G.Jetfarm do
+			for i,v in pairs(game.Workspace:GetChildren()) do
+                    			if v.Name == "JetOrb" then
+			firetouchinterest(game.Players.LocalPlayer.Character:WaitForChild("Head"), v, 0)
+			firetouchinterest(game.Players.LocalPlayer.Character:WaitForChild("Head"), v, 1)
+                    			end
+                			end
+			task.wait()
+			end
+	 end
+})
+
+Badge4:AddToggle({
+	Name = "Farm Phase Orb",
+	Callback = function(Value)
+			_G.Phasefarm = Value
+			while _G.Phasefarm do
+			for i,v in pairs(game.Workspace:GetChildren()) do
+                    			if v.Name == "PhaseOrb" then
+			firetouchinterest(game.Players.LocalPlayer.Character:WaitForChild("Head"), v, 0)
+			firetouchinterest(game.Players.LocalPlayer.Character:WaitForChild("Head"), v, 1)
+                    			end
+                			end
+			task.wait()
+			end
+	 end
+})
+
+Badge4:AddToggle({
+	Name = "Farm Siphon Orb",
+	Callback = function(Value)
+			_G.Siphonfarm = Value
+			while _G.Siphonfarm do
+			if game.Workspace:FindFirstChild("SiphonOrb") then
+			for i,v in pairs(game.Workspace:GetChildren()) do
+                    			if v.Name == "SiphonOrb" then
+			firetouchinterest(game.Players.LocalPlayer.Character:WaitForChild("Head"), v, 0)
+			firetouchinterest(game.Players.LocalPlayer.Character:WaitForChild("Head"), v, 1)
+                    				end
+                			end
+                			end
+			task.wait()
+			end
+	 end
+})
+
+Badge4:AddToggle({
+	Name = "Farm Glitch Orb,
+	Callback = function(Value)
+			_G.Glitchfarm = Value
+			while _G.Glitchfarm do
+			if game.Workspace:FindFirstChild("GlitchOrb") then
+			for i,v in pairs(game.Workspace:GetChildren()) do
+                    			if v.Name == "GlitchOrb" then
+			firetouchinterest(game.Players.LocalPlayer.Character:WaitForChild("Head"), v, 0)
+			firetouchinterest(game.Players.LocalPlayer.Character:WaitForChild("Head"), v, 1)
+                    				end
+                			end
+                			end
+			task.wait()
+			end
+	 end
+})
+
+Badge4:AddToggle({
+	Name = "Farm Orb Of Honor { might not work }",
+	Callback = function(Value)
+			_G.Honorfarm = Value
+			while _G.Honorfarm do
+			if game.Workspace:FindFirstChild("OrbOfHonor") then
+			for i,v in pairs(game.Workspace:GetChildren()) do
+                    			if v.Name == "OrbOfHonor" then
+			firetouchinterest(game.Players.LocalPlayer.Character:WaitForChild("Head"), v, 0)
+			firetouchinterest(game.Players.LocalPlayer.Character:WaitForChild("Head"), v, 1)
+                    				end
+                			end
+                			end
+			task.wait()
+			end
+	 end
+})
+
+Badge4:AddToggle({
+	Name = "Farm Gift",
+	Callback = function(Value)
+			Giftfarm = Value
+			while Giftfarm do
+			for i,v in pairs(game.Workspace:GetChildren()) do
+                    			if v.Name == "Gift" then
+			firetouchinterest(game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart"), v, 0)
+			firetouchinterest(game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart"), v, 1)
+                    			end
+                			end
+			task.wait()
+			end
+	 end
+})
+
+Badge4:AddToggle({
+	Name = "Farm Slapples",
+	Default = false,
+	Callback = function(Value)
+	    SlappleFarm = Value
+while SlappleFarm do
+if game.Players.LocalPlayer.Character:FindFirstChild("entered") then
+for i, v in pairs(workspace.Arena.island5.Slapples:GetChildren()) do
+                if game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart") and game.Players.LocalPlayer.Character:FindFirstChild("entered") and v.Name == "Slapple" or v.Name == "GoldenSlapple" and v:FindFirstChild("Glove") and v.Glove:FindFirstChildWhichIsA("TouchTransmitter") then
+                    firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart, v.Glove, 0)
+                    firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart, v.Glove, 1)
+                end
+            end
+       end
+task.wait()
+end
+	end    
+})
+
+Badge4:AddToggle({
+	Name = "Farm Candy",
+	Default = false,
+	Callback = function(Value)
+	    CandyCornsFarm = Value
+while CandyCornsFarm do
+for i, v in pairs(game.Workspace.CandyCorns:GetChildren()) do
+                if game.Players.LocalPlayer.Character:FindFirstChild("Head") and v:FindFirstChildWhichIsA("TouchTransmitter") then
+                    firetouchinterest(game.Players.LocalPlayer.Character.Head, v, 0)
+                    firetouchinterest(game.Players.LocalPlayer.Character.Head, v, 1)
+                end
+            end
+task.wait()
+end
+	end    
+})
+
+Badge5:AddTextbox({
+    Name = "Fake Badge Name",
+    Default = "Input",
+    TextDisappear = false,
+    Callback = function(Value)
+_G.BadgeName = Value
+    end
+})
+
+Badge5:AddButton({
+    Name = "Give Fake Badge",
+    Callback = function()
+game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Badge Awarded",Text = ""..game.Players.LocalPlayer.Character.Name.." won Slap Battles's ''".._G.BadgeName.."'' award!" ,Duration = 5, Icon = "rbxthumb://type=Asset&id=206410289&w=150&h=150"})
+    end
 })
