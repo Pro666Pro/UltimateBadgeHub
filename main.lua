@@ -965,7 +965,7 @@ Badge4:AddToggle({
 })
 
 Badge4:AddToggle({
-	Name = "Farm Glitch Orb,
+	Name = "Farm Glitch Orb",
 	Callback = function(Value)
 			_G.Glitchfarm = Value
 			while _G.Glitchfarm do
