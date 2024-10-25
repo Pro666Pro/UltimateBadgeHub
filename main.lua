@@ -45,6 +45,12 @@ local Badge3 = Window:MakeTab({
 	PremiumOnly = false
 })
 
+local Badge8 = Window:MakeTab({
+	Name = "Teleport To Places Section",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
 local Badge5 = Window:MakeTab({
 	Name = "Other Section",
 	Icon = "rbxassetid://4483345998",
@@ -55,6 +61,118 @@ local Badge6 = Window:MakeTab({
 	Name = "Auto-Farm Section",
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
+})
+
+local Badge7 = Window:MakeTab({
+	Name = "In-Place Only Section",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Badge5:AddButton({
+	Name = "Get Titan Glove",
+	Callback = function()
+for i, v in pairs(game:GetService("ReplicatedStorage")._NETWORK:GetChildren()) do
+	    -- Check if the name contains the character '{'
+	    if v.Name:find("{") then
+	        local args = {
+	            [1] = "Titan"
+	        }
+	
+	        -- Check if v is a RemoteEvent and can FireServer
+	        if v:IsA("RemoteEvent") then
+	            v:FireServer(unpack(args))
+	        elseif v:IsA("RemoteFunction") then
+	            -- If it's a RemoteFunction, use InvokeServer
+	            local result = v:InvokeServer(unpack(args))
+	            print("Result from InvokeServer:", result)  -- Optional: Print the result
+	        else
+	            print("v is neither a RemoteEvent nor a RemoteFunction.")
+	        end
+	    end
+	end
+	 end
+})
+
+Badge2:AddToggle({
+	Name = "Auto-Get Tycoon",
+	Default = false,
+	Callback = function(Value)
+	   _G.AutoTpPlate = Value
+if game.Players.LocalPlayer.Character:FindFirstChild("entered") and #game.Players:GetPlayers() >= 7 then
+while _G.AutoTpPlate do
+if game.Players.LocalPlayer.Character:FindFirstChild("entered") and #game.Players:GetPlayers() >= 7 then
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.workspace.Arena.Plate.CFrame * CFrame.new(0,2,0)
+end
+task.wait()
+end
+elseif _G.AutoTpPlate == true then
+game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Error",Text = "You need to enter arena, or there's not enough players" ,Duration = 10, Icon = "rbxthumb://type=Asset&id=9649923610&w=150&h=150",Button1 = "OK"})
+wait(0.05)
+AutoTycoon:Set(false)
+end
+	end    
+})
+
+Badge2:AddButton({
+	Name = "Activate Invisibility { for auto-get tycoon, 666 slaps required }",
+	Default = false,
+	Callback = function(Value)
+	   fireclickdetector(workspace.Lobby["Ghost"].ClickDetector)
+			wait(0.1)
+			 game.ReplicatedStorage.Ghostinvisibilityactivated:FireServer()
+	end    
+})
+
+Badge7:AddButton({
+	Name = "Get Poltergeist Glove UI { use in zombie game }",
+	Callback = function()
+			 loadstring(game:HttpGet('https://raw.githubusercontent.com/Pro666Pro/GetPoltergeist/main/main.lua'))()
+	 end
+})
+
+Badge7:AddButton({
+	Name = "Touch Bob Plushie ( use in limbo )",
+	Callback = function()
+wait(1)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace.RepressedMemories._ugcQuestObjectBobPlushie.Handle.CFrame
+wait(1)
+fireclickdetector(workspace.RepressedMemories._ugcQuestObjectBobPlushie.ClickDetector)
+	 end
+})
+
+Badge7:AddButton({
+	Name = "Touch Alchemist Hood ( use in elude maze )",
+	Callback = function()
+wait(1)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace._ugcQuestObjectEludeHat.Handle.CFrame
+wait(1)
+fireclickdetector(workspace._ugcQuestObjectEludeHat.ClickDetector)
+	 end
+})
+
+Badge7:AddButton({
+	Name = "Touch Rob Plushie ( use in null zone )",
+	Callback = function()
+wait(1)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace._ugcQuestObjectBobPlushie.Handle.CFrame
+wait(1)
+fireclickdetector(workspace._ugcQuestObjectBobPlushie.ClickDetector)
+	 end
+})
+
+Badge7:AddButton({
+	Name = "Teleport Get Null Glove ( use in null zone )",
+	Callback = function()
+			 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(5459.34521484375, -189.00048828125, 1845.4388427734375)
+	 end
+})
+
+Badge7:AddButton({
+	Name = "Teleport Get Tinkerer Glove ( use in null zone )",
+	Callback = function()
+			 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(4845.7861328125, -214.0004119873047, 799.2669067382812)
+	 end
 })
 
 Badge6:AddButton({
@@ -474,6 +592,32 @@ game:GetService("TeleportService"):Teleport(6403373529)
 	]])
 end	
 game:GetService("TeleportService"):Teleport(11828384869)
+	 end
+})
+
+Badge2:AddButton({
+	Name = "Auto-Get Rob Plushie (dont work)",
+	Callback = function()
+local teleportFunc = queueonteleport or queue_on_teleport
+if teleportFunc then
+    teleportFunc([[
+        if not game:IsLoaded() then
+            game.Loaded:Wait()
+        end
+        repeat wait() until game.Players.LocalPlayer
+        game:GetService("RunService").RenderStepped:Connect(function()
+            game:GetService("GuiService"):ClearError()
+game.CoreGui:WaitForChild("RobloxLoadingGUI"):Destroy()
+        end)
+wait(1)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace._ugcQuestObjectBobPlushie.Handle.CFrame
+wait(1)
+fireclickdetector(workspace._ugcQuestObjectBobPlushie.ClickDetector)
+wait(1)
+game:GetService("TeleportService"):Teleport(6403373529)
+	]])
+end	
+game:GetService("TeleportService"):Teleport(14422118326)
 	 end
 })
 
