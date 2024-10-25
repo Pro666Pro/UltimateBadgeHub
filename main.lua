@@ -657,7 +657,7 @@ game:GetService("StarterGui"):SetCore("SendNotification",{Title = "nice job",Tex
 Badge7:AddButton({
 	Name = "Get Boxer { Use In Barzil }",
 	Callback = function()
-wait
+wait(0.5)
 game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Credits",Text = "script by nexer" ,Duration = 1000, Icon = "rbxthumb://type=Asset&id=9649923610&w=150&h=150",Button1 = "OK"})
 wait(1)
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(4231.26123046875, 3505.86376953125, 270.4519958496094)
