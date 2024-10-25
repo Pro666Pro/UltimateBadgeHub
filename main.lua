@@ -45,7 +45,7 @@ local Badge3 = Window:MakeTab({
 	PremiumOnly = false
 })
 
-local Badge8 = Window:MakeTab({
+local Teleport = Window:MakeTab({
 	Name = "Teleport To Places Section",
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
@@ -67,6 +67,294 @@ local Badge7 = Window:MakeTab({
 	Name = "In-Place Only Section",
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
+})
+
+local TeleportToGames1 = Teleport:AddSection({
+	Name = "Regular Gamemodes"
+})
+
+local TeleportToGames = Teleport:AddSection({
+	Name = "Places Used For Glove Obtainments"
+})
+
+local TeleportToGames2 = Teleport:AddSection({
+	Name = "Limited Time Gamemode"
+})
+
+local TeleportToGames3 = Teleport:AddSection({
+	Name = "Other Gamemodes"
+})
+
+TeleportToGames1:AddButton({
+	Name = "Slap Battles",
+	Callback = function()
+			 game:GetService("TeleportService"):Teleport(6403373529)
+	 end
+})
+
+TeleportToGames1:AddButton({
+	Name = "Slap Battles - NO ONESHOT GLOVES",
+	Callback = function()
+			 game:GetService("TeleportService"):Teleport(9015014224)
+	 end
+})
+
+TeleportToGames1:AddButton({
+	Name = "Killstreak Only",
+	Callback = function()
+			 game:GetService("TeleportService"):Teleport(11520107397)
+	 end
+})
+
+TeleportToGames1:AddButton({
+	Name = "Slap Royale Matchmaking",
+	Callback = function()
+			 game:GetService("TeleportService"):Teleport(9426795465)
+	 end
+})
+
+TeleportToGames1:AddButton({
+	Name = "Slap Royale",
+	Callback = function()
+			 game:GetService("TeleportService"):Teleport(9431156611)
+	 end
+})
+
+TeleportToGames:AddButton({
+	Name = "Elude Maze",
+	Callback = function()
+			 game:GetService("TeleportService"):Teleport(11828384869)
+	 end
+})
+
+TeleportToGames:AddButton({
+	Name = "Ice Trials",
+	Callback = function()
+			 game:GetService("TeleportService"):Teleport(17290438723)
+	 end
+})
+
+TeleportToGames:AddButton({
+	Name = "The Null Zone (first method)",
+	Callback = function()
+			 game:GetService("TeleportService"):Teleport(14422118326)
+	 end
+})
+
+TeleportToGames:AddButton({
+	Name = "The Null Zone (second method)",
+	Callback = function()
+local teleportFunc = queueonteleport or queue_on_teleport
+if teleportFunc then
+    teleportFunc([[
+        if not game:IsLoaded() then
+            game.Loaded:Wait()
+        end
+        repeat wait() until game.Players.LocalPlayer
+        game:GetService("RunService").RenderStepped:Connect(function()
+            game:GetService("GuiService"):ClearError()
+game.CoreGui:WaitForChild("RobloxLoadingGUI"):Destroy()
+        end)
+loadstring(game:HttpGet('https://raw.githubusercontent.com/Pro666Pro/TheNullZone/main/main.lua'))()
+	]])
+end	
+game:GetService("TeleportService"):Teleport(14422118326)
+	 end
+})
+
+TeleportToGames:AddButton({
+	Name = "The Null Zone (third method, need 3 artifacts)",
+	Callback = function()
+local teleportFunc = queueonteleport or queue_on_teleport
+if teleportFunc then
+    teleportFunc([[
+        if not game:IsLoaded() then
+            game.Loaded:Wait()
+        end
+loadstring(game:HttpGet('https://raw.githubusercontent.com/Pro666Pro/null/main/main.lua'))()
+	]])
+end	
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace.RepressedMemories.SimonSaysGate.Portal.CFrame
+	 end
+})
+
+TeleportToGames:AddButton({
+	Name = "barzil",
+	Callback = function()
+			 game:GetService("TeleportService"):Teleport(7234087065)
+	 end
+})
+
+
+TeleportToGames:AddButton({
+	Name = "The Staff Application (first method)",
+	Callback = function()
+			 game:GetService("TeleportService"):Teleport(16034567693)
+	 end
+})
+
+TeleportToGames:AddButton({
+	Name = "The Staff Application (second method)",
+	Callback = function()
+			 if game:GetService("ReplicatedStorage").Assets.Retro then
+			 game.ReplicatedStorage.Assets.Retro.Parent = workspace
+			 wait(1.5)
+			 fireclickdetector(workspace.Retro.Map.RetroObbyMap:GetChildren()[5].StaffApp.Button.ClickDetector)
+			 else
+			 fireclickdetector(workspace.Retro.Map.RetroObbyMap:GetChildren()[5].StaffApp.Button.ClickDetector)
+			 end
+	 end
+})
+
+TeleportToGames:AddButton({
+	Name = "Where Guide Resides (first method)",
+	Callback = function()
+			 game:GetService("TeleportService"):Teleport(18550498098)
+	 end
+})
+
+TeleportToGames:AddButton({
+	Name = "Where Guide Resides (second method)",
+	Callback = function()
+			 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(17944.505859375, -130.1599884033203, -3562.9736328125)
+	 end
+})
+
+TeleportToGames:AddButton({
+	Name = "Farmland & Unknown World (first method)",
+	Callback = function()
+			 game:GetService("TeleportService"):Teleport(15228348051)
+	 end
+})
+
+TeleportToGames:AddButton({
+	Name = "Farmland & Unknown World (second method)",
+	Callback = function()
+local teleportFunc = queueonteleport or queue_on_teleport
+if teleportFunc then
+    teleportFunc([[
+        if not game:IsLoaded() then
+            game.Loaded:Wait()
+        end
+        repeat wait() until game.Players.LocalPlayer
+        game:GetService("RunService").RenderStepped:Connect(function()
+            game:GetService("GuiService"):ClearError()
+game.CoreGui:WaitForChild("RobloxLoadingGUI"):Destroy()
+        end)
+	]])
+end
+game:GetService("TeleportService"):Teleport(15228348051)
+	 end
+})
+
+TeleportToGames:AddButton({
+	Name = "The Dark Realm (first method)",
+	Callback = function()
+			 game:GetService("TeleportService"):Teleport(13833961666)
+	 end
+})
+
+TeleportToGames:AddButton({
+	Name = "The Dark Realm (second method)",
+	Callback = function()
+local teleportFunc = queueonteleport or queue_on_teleport
+if teleportFunc then
+    teleportFunc([[
+        if not game:IsLoaded() then
+            game.Loaded:Wait()
+        end
+        repeat wait() until game.Players.LocalPlayer
+        game:GetService("RunService").RenderStepped:Connect(function()
+            game:GetService("GuiService"):ClearError()
+game.CoreGui:WaitForChild("RobloxLoadingGUI"):Destroy()
+        end)
+loadstring(game:HttpGet('https://raw.githubusercontent.com/Pro666Pro/TheDarkRealm/main/main.lua'))()
+	]])
+end
+game:GetService("TeleportService"):Teleport(13833961666)
+	 end
+})
+
+TeleportToGames:AddButton({
+	Name = "Binded Maze",
+	Callback = function()
+			 game:GetService("TeleportService"):Teleport(74169485398268)
+	 end
+})
+
+TeleportToGames2:AddButton({
+	Name = "Christmas Event",
+	Callback = function()
+			 game:GetService("TeleportService"):Teleport(15507333474)
+	 end
+})
+
+TeleportToGames2:AddButton({
+	Name = "Slap League",
+	Callback = function()
+			 game:GetService("TeleportService"):Teleport(18698003301)
+	 end
+})
+
+TeleportToGames3:AddButton({
+	Name = "Slap Battles Testing Server (first method)",
+	Callback = function()
+			 game:GetService("TeleportService"):Teleport(9020359053)
+	 end
+})
+
+TeleportToGames3:AddButton({
+	Name = "Slap Battles Testing Server (second method)",
+	Callback = function()
+local teleportFunc = queueonteleport or queue_on_teleport
+if teleportFunc then
+    teleportFunc([[
+        if not game:IsLoaded() then
+            game.Loaded:Wait()
+        end
+        repeat wait() until game.Players.LocalPlayer
+        game:GetService("RunService").RenderStepped:Connect(function()
+            game:GetService("GuiService"):ClearError()
+game.CoreGui:WaitForChild("RobloxLoadingGUI"):Destroy()
+        end)
+	]])
+end
+game:GetService("TeleportService"):Teleport(9020359053)
+	 end
+})
+
+TeleportToGames3:AddButton({
+	Name = "Slap Royale Testing Server (first method)",
+	Callback = function()
+			 game:GetService("TeleportService"):Teleport(9412268818)
+	 end
+})
+
+TeleportToGames3:AddButton({
+	Name = "Slap Royale Testing Server (second method)",
+	Callback = function()
+local teleportFunc = queueonteleport or queue_on_teleport
+if teleportFunc then
+    teleportFunc([[
+        if not game:IsLoaded() then
+            game.Loaded:Wait()
+        end
+        repeat wait() until game.Players.LocalPlayer
+        game:GetService("RunService").RenderStepped:Connect(function()
+            game:GetService("GuiService"):ClearError()
+game.CoreGui:WaitForChild("RobloxLoadingGUI"):Destroy()
+        end)
+	]])
+end
+game:GetService("TeleportService"):Teleport(9412268818)
+	 end
+})
+
+TeleportToGames3:AddButton({
+	Name = "Brazil 🇧🇷",
+	Callback = function()
+			 game:GetService("TeleportService"):Teleport(7234087065)
+	 end
 })
 
 Badge5:AddButton({
@@ -172,6 +460,27 @@ Badge7:AddButton({
 	Name = "Teleport Get Tinkerer Glove ( use in null zone )",
 	Callback = function()
 			 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(4845.7861328125, -214.0004119873047, 799.2669067382812)
+	 end
+})
+
+Badge7:AddButton({
+	Name = "Teleport Get Tinkerer Glove ( use in null zone )",
+	Callback = function()
+			 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(4845.7861328125, -214.0004119873047, 799.2669067382812)
+	 end
+})
+
+Badge7:AddButton({
+	Name = "Get Bind Badge [ Use In Binded Maze, Using FCD ]",
+	Callback = function()
+			 fireclickdetector(workspace.Orb.ClickDetector)
+	 end
+})
+
+Badge7:AddButton({
+	Name = "Teleport To Bind Badge [ Use In Binded Maze, Use If FCD Method Doesn't Work ]",
+	Callback = function()
+			 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-154, 8, -171)
 	 end
 })
 
@@ -977,7 +1286,27 @@ game:GetService("TeleportService"):Teleport(7234087065)
 Badge2:AddButton({
 	Name = "Auto Get Bind { No Alchemist Required } ",
 	Callback = function()
-loadstring(game:HttpGet('https://raw.githubusercontent.com/Pro666Pro/bind/main/main.lua'))()
+local teleportFunc = queueonteleport or queue_on_teleport
+    if teleportFunc then
+        teleportFunc([[
+            if not game:IsLoaded() then
+                game.Loaded:Wait()
+            end
+            repeat wait() until game.Players.LocalPlayer
+game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Credit",Text = "By Nexer1234" ,Duration = 10, Icon = "rbxthumb://type=Asset&id=9649923610&w=150&h=150",Button1 = "alright dud"})
+wait(1)
+fireclickdetector(workspace.Orb.ClickDetector)
+wait(1)
+game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Credit",Text = "Bind Glove Acquired" ,Duration = 10, Icon = "rbxthumb://type=Asset&id=9649923610&w=150&h=150",Button1 = "alright dud"})
+wait(1)
+game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Credit",Text = "Teleporting Back To Slap Battles" ,Duration = 10, Icon = "rbxthumb://type=Asset&id=9649923610&w=150&h=150",Button1 = "alright dud"})
+wait(1)
+game:GetService("TeleportService"):Teleport(6403373529)
+]])
+end
+game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Credit",Text = "By Nexer1234" ,Duration = 10, Icon = "rbxthumb://type=Asset&id=9649923610&w=150&h=150",Button1 = "alright dud"})
+wait(2)
+game:GetService("TeleportService"):Teleport(74169485398268)
   	end    
 })
 
