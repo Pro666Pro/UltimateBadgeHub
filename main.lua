@@ -14,7 +14,7 @@ S.Size = Vector3.new(1000, 10, 1000)
 S.Parent = workspace
 end
 		
-local GameName = "Ultimate Badge HUB ✨ - By Nexer :)"
+local GameName = "Ultimate Badge HUB ✨ - By Nexer :) - W.I.P."
 
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 local Window = OrionLib:MakeWindow({IntroText = "Ultimate Badge HUB ✨", IntroIcon = "rbxassetid://15315284749",Name = GameName, HidePremium = false, SaveConfig = true, ConfigFolder = "Tutorial"})
