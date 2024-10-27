@@ -1158,12 +1158,15 @@ game:GetService("StarterGui"):SetCore("SendNotification",{Title = "warning",Text
 game:GetService("StarterGui"):SetCore("SendNotification",{Title = "warning",Text = "you can get kicked if u afk for 20 mins, i dont have anti afk feature, so yeah" ,Duration = 1000, Icon = "rbxthumb://type=Asset&id=4567880251&w=150&h=150",Button1 = "nah bro add anti afk script plez"})
 game:GetService("StarterGui"):SetCore("SendNotification",{Title = "warning",Text = "you can get kicked if u afk for 20 mins, i dont have anti afk feature, so yeah" ,Duration = 1000, Icon = "rbxthumb://type=Asset&id=4567880251&w=150&h=150",Button1 = "nah bro add anti afk script plez"})
 game:GetService("StarterGui"):SetCore("SendNotification",{Title = "warning",Text = "you can get kicked if u afk for 20 mins, i dont have anti afk feature, so yeah" ,Duration = 1000, Icon = "rbxthumb://type=Asset&id=4567880251&w=150&h=150",Button1 = "nah bro add anti afk script plez"})
-repeat wait(1.05)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace["Baseplate"].CFrame * CFrame.new(0,10,0)
+wait(0.5)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace["Baseplate"].CFrame * CFrame.new(0,10,0)
+repeat wait(1.1)
 game:GetService("ReplicatedStorage").lbrick:FireServer()
 game:GetService("Players").LocalPlayer.PlayerGui.BRICKCOUNT.ImageLabel.TextLabel.Text = game:GetService("Players").LocalPlayer.PlayerGui.BRICKCOUNT.ImageLabel.TextLabel.Text + 1
 until game:GetService("BadgeService"):UserHasBadgeAsync(game.Players.LocalPlayer.UserId, 2127567042)
 else
-print("are you blind")
+game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Error",Text = "Equip Ghost First" ,Duration = 1000, Icon = "rbxthumb://type=Asset&id=4567880251&w=150&h=150",Button1 = "yipee"})
 end
   	end 
 })
@@ -1345,133 +1348,28 @@ game:GetService("TeleportService"):Teleport(11828384869)
 Badge2:AddButton({
 	Name = "Auto Get Fan",
 	Callback = function()
-game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Credits",Text = "Script By Nexer1234" ,Duration = 1000, Icon = "rbxthumb://type=Asset&id=4567880251&w=150&h=150",Button1 = "yipee"})
-wait(1)
-local teleportFunc = queueonteleport or queue_on_teleport
-if teleportFunc then
-    teleportFunc([[
-        if not game:IsLoaded() then
-            game.Loaded:Wait()
-        end
-game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Credits",Text = "Script By Nexer1234" ,Duration = 1000, Icon = "rbxthumb://type=Asset&id=4567880251&w=150&h=150",Button1 = "yipee"})
-wait(1)
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(247.56419372558594, -265.0000305175781, -370.77752685546875)
-wait(0.5)
-game:GetService("ReplicatedStorage").RemoteEvents.SuitUpClown:FireServer()
-wait(0.1)
-game:GetService("ReplicatedStorage").RemoteEvents.KeyQuest:FireServer()
-wait(0.1)
-game:GetService("ReplicatedStorage").RemoteEvents.KeyAcquired:FireServer()
-wait(0.1)
-game:GetService("ReplicatedStorage").RemoteEvents.GOHOME:FireServer()
-wait(0.1)
-game:GetService("ReplicatedStorage").RemoteEvents.KeyBadgeReward:FireServer()
-wait(0.1)
-game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Credits",Text = "You Got Fan!!!" ,Duration = 1000, Icon = "rbxthumb://type=Asset&id=4567880251&w=150&h=150",Button1 = "yipee"})
-wait(1)
-game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Teleporting",Text = "Teleporting you back to slap battles!" ,Duration = 1000, Icon = "rbxthumb://type=Asset&id=9649923610&w=150&h=150",Button1 = "OK"})
-wait(1)
-game:GetService("TeleportService"):Teleport(6403373529)
-	]])
-end	
-game:GetService("TeleportService"):Teleport(7234087065)
+loadstring(game:HttpGet('https://raw.githubusercontent.com/Pro666Pro/autogetfanglove/main/main.lua'))()
   	end    
 })
 
 Badge2:AddButton({
 	Name = "Auto Get Boxer",
 	Callback = function()
-game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Credits",Text = "Script By Nexer1234" ,Duration = 1000, Icon = "rbxthumb://type=Asset&id=4567880251&w=150&h=150",Button1 = "yipee"})
-wait(1)
-local teleportFunc = queueonteleport or queue_on_teleport
-if teleportFunc then
-    teleportFunc([[
-        if not game:IsLoaded() then
-            game.Loaded:Wait()
-        end
-game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Credits",Text = "Script By Nexer1234" ,Duration = 1000, Icon = "rbxthumb://type=Asset&id=4567880251&w=150&h=150",Button1 = "yipee"})
-wait(1)
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(4231.26123046875, 3505.86376953125, 270.4519958496094)
-wait(0.5)
-fireclickdetector(workspace.BoxingGloves.ClickDetector)
-wait(1)
-game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Credits",Text = "You Got Boxer!!!" ,Duration = 1000, Icon = "rbxthumb://type=Asset&id=4567880251&w=150&h=150",Button1 = "yipee"})
-wait(1)
-game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Teleporting",Text = "Teleporting you back to slap battles!" ,Duration = 1000, Icon = "rbxthumb://type=Asset&id=9649923610&w=150&h=150",Button1 = "OK"})
-wait(1)
-game:GetService("TeleportService"):Teleport(6403373529)
-	]])
-end	
-game:GetService("TeleportService"):Teleport(7234087065)
+loadstring(game:HttpGet('https://raw.githubusercontent.com/Pro666Pro/autogetboxerglove/main/main.lua'))()
   	end    
 })
 
 Badge2:AddButton({
 	Name = "Auto Get Fan + Boxer",
 	Callback = function()
-game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Credits",Text = "Script By Nexer1234" ,Duration = 1000, Icon = "rbxthumb://type=Asset&id=4567880251&w=150&h=150",Button1 = "yipee"})
-wait(1)
-local teleportFunc = queueonteleport or queue_on_teleport
-if teleportFunc then
-    teleportFunc([[
-        if not game:IsLoaded() then
-            game.Loaded:Wait()
-        end
-game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Credits",Text = "Script By Nexer1234" ,Duration = 1000, Icon = "rbxthumb://type=Asset&id=4567880251&w=150&h=150",Button1 = "yipee"})
-wait(1)
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(247.56419372558594, -265.0000305175781, -370.77752685546875)
-wait(0.5)
-game:GetService("ReplicatedStorage").RemoteEvents.SuitUpClown:FireServer()
-wait(0.1)
-game:GetService("ReplicatedStorage").RemoteEvents.KeyQuest:FireServer()
-wait(0.1)
-game:GetService("ReplicatedStorage").RemoteEvents.KeyAcquired:FireServer()
-wait(0.1)
-game:GetService("ReplicatedStorage").RemoteEvents.GOHOME:FireServer()
-wait(0.1)
-game:GetService("ReplicatedStorage").RemoteEvents.KeyBadgeReward:FireServer()
-wait(0.1)
-game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Credits",Text = "You Got Fan!!!" ,Duration = 1000, Icon = "rbxthumb://type=Asset&id=4567880251&w=150&h=150",Button1 = "yipee"})
-wait(1)
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(4231.26123046875, 3505.86376953125, 270.4519958496094)
-wait(0.5)
-fireclickdetector(workspace.BoxingGloves.ClickDetector)
-wait(1)
-game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Credits",Text = "You Got Boxer!!!" ,Duration = 1000, Icon = "rbxthumb://type=Asset&id=4567880251&w=150&h=150",Button1 = "yipee"})
-wait(1)
-game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Teleporting",Text = "Teleporting you back to slap battles!" ,Duration = 1000, Icon = "rbxthumb://type=Asset&id=9649923610&w=150&h=150",Button1 = "OK"})
-wait(1)
-game:GetService("TeleportService"):Teleport(6403373529)
-	]])
-end	
-game:GetService("TeleportService"):Teleport(7234087065)
+loadstring(game:HttpGet('https://raw.githubusercontent.com/Pro666Pro/autogetfanboxer/main/main.lua'))()
   	end    
 })
 
 Badge2:AddButton({
 	Name = "Auto Get Bind { No Alchemist Required } ",
 	Callback = function()
-local teleportFunc = queueonteleport or queue_on_teleport
-    if teleportFunc then
-        teleportFunc([[
-            if not game:IsLoaded() then
-                game.Loaded:Wait()
-            end
-            repeat wait() until game.Players.LocalPlayer
-game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Credit",Text = "By Nexer1234" ,Duration = 10, Icon = "rbxthumb://type=Asset&id=9649923610&w=150&h=150",Button1 = "alright dud"})
-wait(1)
-fireclickdetector(workspace.Orb.ClickDetector)
-wait(1)
-game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Credit",Text = "Bind Glove Acquired" ,Duration = 10, Icon = "rbxthumb://type=Asset&id=9649923610&w=150&h=150",Button1 = "alright dud"})
-wait(1)
-game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Credit",Text = "Teleporting Back To Slap Battles" ,Duration = 10, Icon = "rbxthumb://type=Asset&id=9649923610&w=150&h=150",Button1 = "alright dud"})
-wait(1)
-game:GetService("TeleportService"):Teleport(6403373529)
-]])
-end
-game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Credit",Text = "By Nexer1234" ,Duration = 10, Icon = "rbxthumb://type=Asset&id=9649923610&w=150&h=150",Button1 = "alright dud"})
-wait(2)
-game:GetService("TeleportService"):Teleport(74169485398268)
+loadstring(game:HttpGet('https://raw.githubusercontent.com/Pro666Pro/bind/main/main.lua'))()
   	end    
 })
 
@@ -1537,8 +1435,8 @@ end
 Badge4:AddToggle({
 	Name = "Farm Hallow Jack { use when got 10 killstreak }",
 	Callback = function(Value)
-_G.HallowJackFarm = Value
-while _G.HallowJackFarm do
+_G.HallowJack = Value
+while _G.HallowJack do
 if workspace:FindFirstChild("Gravestone") then
 for i,v in pairs(game.Workspace:GetChildren()) do
                     if v.Name == "Gravestone" and v:FindFirstChild("ClickDetector") then
