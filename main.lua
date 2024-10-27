@@ -907,6 +907,13 @@ Badge2:AddButton({
 })
 
 Badge2:AddButton({
+	Name = "Auto-Get Hybrid { credits to donjo? ig }",
+	Callback = function()
+			 game:GetService("ReplicatedStorage").GRRRRR:FireServer(true)
+	 end
+})
+
+Badge2:AddButton({
 	Name = "Auto-Get Court Evidence",
 	Callback = function()
 			 fireclickdetector(game.Workspace.Lobby.Scene.knofe.ClickDetector)
@@ -1528,6 +1535,28 @@ end
 })
 
 Badge4:AddToggle({
+	Name = "Farm Hallow Jack { use when got 10 killstreak }",
+	Callback = function(Value)
+_G.HallowJackFarm = Value
+while _G.HallowJackFarm do
+if workspace:FindFirstChild("Gravestone") then
+for i,v in pairs(game.Workspace:GetChildren()) do
+                    if v.Name == "Gravestone" and v:FindFirstChild("ClickDetector") then
+if game.Players.LocalPlayer.Character:FindFirstChild("KillstreakLevel") and game.Players.LocalPlayer.Character:FindFirstChild("KillstreakLevel").Value > 9 then
+fireclickdetector(v.ClickDetector, 0)
+fireclickdetector(v.ClickDetector, 1)
+end
+                    end
+                end
+elseif workspace:FindFirstChild("Gravestone") == nil and game.Players.LocalPlayer.Character:FindFirstChild("KillstreakLevel") and game.Players.LocalPlayer.Character:FindFirstChild("KillstreakLevel").Value > 9 then
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace["Baseplate"].CFrame * CFrame.new(0,10,0)
+end
+task.wait()
+end
+	 end
+})
+
+Badge4:AddToggle({
 	Name = "Farm Toolbox",
 	Callback = function(Value)
 			Toolboxfarm = Value
@@ -1614,13 +1643,13 @@ Badge4:AddToggle({
 })
 
 Badge4:AddToggle({
-	Name = "Farm Orb Of Honor { might not work }",
+	Name = "Farm Materialize Orb",
 	Callback = function(Value)
 			_G.Honorfarm = Value
 			while _G.Honorfarm do
-			if game.Workspace:FindFirstChild("OrbOfHonor") then
+			if game.Workspace:FindFirstChild("MATERIALIZEOrb") then
 			for i,v in pairs(game.Workspace:GetChildren()) do
-                    			if v.Name == "OrbOfHonor" then
+                    			if v.Name == "MATERIALIZEOrb" then
 			firetouchinterest(game.Players.LocalPlayer.Character:WaitForChild("Head"), v, 0)
 			firetouchinterest(game.Players.LocalPlayer.Character:WaitForChild("Head"), v, 1)
                     				end
