@@ -1,3 +1,3 @@
 loadstring(game:HttpGet('https://raw.githubusercontent.com/Pro666Pro/BypassAntiCheat/main/main.lua'))()
 
-loadstring(game:HttpGet("https://gist.githubusercontent.com/Pro666Pro/91f7440959e518704d2c5782bc9f54f9/raw/1476447638cd466b95c3c2ec99be0c8c8667ecdc/main.lua"))()
+loadstring(game:HttpGet("https://gist.githubusercontent.com/Pro666Pro/bcf8a08b86a2c4c9f3441ed70edc7691/raw/0c7b37925022f98acede615c78970305eae0659c/main.lua"))()
