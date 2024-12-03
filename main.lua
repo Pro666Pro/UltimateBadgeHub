@@ -37,7 +37,9 @@ end
 	end    
 })
 
-Launcher:AddParagraph("Launch Script", "Edit setting above if you want to, and then launch script")
+Launcher:AddParagraph("Choose Version", "Default = Latest Version")
+
+Launcher:AddParagraph("WARNING!", "Versions that lower than 3.2, don't support localizations!")
 
 Launcher:AddDropdown({
 	Name = "Choose Version",
@@ -64,6 +66,8 @@ end
 	end    
 })
 
+Launcher:AddParagraph("Launch Script", "Edit settings above if you want to, and then launch script!")
+
 Launcher:AddButton({
 	Name = "Launch Ultimate Badge Hub",
 	Callback = function()
@@ -78,7 +82,7 @@ loadstring(game:HttpGet("https://gist.githubusercontent.com/Pro666Pro/c13f44444b
 elseif _G.Version == "v3.1" then
 OrionLib:Destroy()
 wait(0.5)
-loadstring(game:HttpGet("https://gist.githubusercontent.com/Pro666Pro/bcf8a08b86a2c4c9f3441ed70edc7691/raw/0c7b37925022f98acede615c78970305eae0659c/main.lua"))()
+loadstring(game:HttpGet("https://gist.githubusercontent.com/Pro666Pro/45ff97383d7be43009d0aa3f0c7b7469/raw/d3dfb5b9c2fb349db0de560f40932d027c41978f/main.lua"))()
 elseif _G.Version == "v3.0" then
 OrionLib:Destroy()
 wait(0.5)
