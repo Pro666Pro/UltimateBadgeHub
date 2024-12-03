@@ -43,7 +43,7 @@ Launcher:AddButton({
 	Name = "Launch Ultimate Badge Hub",
 	Callback = function()
 OrionLib:Destroy()
-wait(2)
+wait(0.5)
 loadstring(game:HttpGet("https://gist.githubusercontent.com/Pro666Pro/c13f44444bd20a832dff2210740d9e1a/raw/69b9eba96decf12ecd64cda70d7f25c03d76d959/main.lua"))()
 	 end
 })
