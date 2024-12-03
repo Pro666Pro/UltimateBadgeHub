@@ -39,11 +39,50 @@ end
 
 Launcher:AddParagraph("Launch Script", "Edit setting above if you want to, and then launch script")
 
+Launcher:AddDropdown({
+	Name = "Choose Version",
+	Default = "v3.3",
+	Options = {"v3.3", "v3.2", "v3.1", "v3.0"},
+	Callback = function(Value)
+if Value == "v3.3" then
+wait(0.01)
+_G.Version = "v3.3"
+wait(0.01)
+elseif Value == "v3.2" then
+wait(0.01)
+_G.Version = "v3.2"
+wait(0.01)
+elseif Value == "v3.1" then
+wait(0.01)
+_G.Version = "v3.1"
+wait(0.01)
+elseif Value == "v3.0" then
+wait(0.01)
+_G.Version = "v3.0"
+wait(0.01)
+end
+	end    
+})
+
 Launcher:AddButton({
 	Name = "Launch Ultimate Badge Hub",
 	Callback = function()
+if _G.Version == "v3.3" then
+OrionLib:Destroy()
+wait(0.5)
+loadstring(game:HttpGet("https://gist.githubusercontent.com/Pro666Pro/7867d21551ffc0bd8a00585e81453cbd/raw/5a129ad08b07b5965535541a1e7fcbfb9fbbe0a1/main.lua"))()
+elseif _G.Version == "v3.2" then
 OrionLib:Destroy()
 wait(0.5)
 loadstring(game:HttpGet("https://gist.githubusercontent.com/Pro666Pro/c13f44444bd20a832dff2210740d9e1a/raw/69b9eba96decf12ecd64cda70d7f25c03d76d959/main.lua"))()
+elseif _G.Version == "v3.1" then
+OrionLib:Destroy()
+wait(0.5)
+loadstring(game:HttpGet("https://gist.githubusercontent.com/Pro666Pro/bcf8a08b86a2c4c9f3441ed70edc7691/raw/0c7b37925022f98acede615c78970305eae0659c/main.lua"))()
+elseif _G.Version == "v3.0" then
+OrionLib:Destroy()
+wait(0.5)
+loadstring(game:HttpGet("https://gist.githubusercontent.com/Pro666Pro/91f7440959e518704d2c5782bc9f54f9/raw/1476447638cd466b95c3c2ec99be0c8c8667ecdc/main.lua"))()
+end
 	 end
 })
