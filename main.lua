@@ -44,10 +44,14 @@ Launcher:AddParagraph("WARNING!", "Versions that higher than 3.3, don't support 
 
 Launcher:AddDropdown({
 	Name = "Choose Version",
-	Default = "v3.4",
-	Options = {"v3.4", "v3.3", "v3.2", "v3.1", "v3.0"},
+	Default = "v3.5",
+	Options = {"v3.5", "v3.4", "v3.3", "v3.2", "v3.1", "v3.0"},
 	Callback = function(Value)
-if Value == "v3.4" then
+if Value == "v3.5" then
+wait(0.01)
+_G.Version = "v3.5"
+wait(0.01)
+elseif Value == "v3.4" then
 wait(0.01)
 _G.Version = "v3.4"
 wait(0.01)
@@ -76,7 +80,11 @@ Launcher:AddParagraph("Launch Script", "Edit settings above if you want to, and 
 Launcher:AddButton({
 	Name = "Launch Ultimate Badge Hub",
 	Callback = function()
-if _G.Version == "v3.4" then
+if _G.Version == "v3.5" then
+OrionLib:Destroy()
+wait(0.5)
+loadstring(game:HttpGet("https://gist.githubusercontent.com/Pro666Pro/f9fbdcf69a215e728f70617839e91e6d/raw/8eea0b32d7a3dd75d4557c128026d8aad88b0e3b/main.lua"))()
+elseif _G.Version == "v3.4" then
 OrionLib:Destroy()
 wait(0.5)
 loadstring(game:HttpGet("https://gist.githubusercontent.com/Pro666Pro/17ad21691c1d4ab925ebe505e5a3f5bb/raw/88a23e5c7300a4d1e8a92b9d15e837a7bba61bad/main.lua"))()
