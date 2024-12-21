@@ -77,6 +77,9 @@ end
 
 Launcher:AddParagraph("Launch Script", "Edit settings above if you want to, and then launch script!")
 
+Launcher:AddParagraph("WARNING!", "Hello! This is message from creator of this script. I won't able to upgrade it due to a vacation (yes I forgot source at home).")
+Launcher:AddParagraph("WARNING!", "This script will update in 03.01.2025. Have a nice day!")
+
 Launcher:AddButton({
 	Name = "Launch Ultimate Badge Hub",
 	Callback = function()
