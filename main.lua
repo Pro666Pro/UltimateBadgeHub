@@ -44,10 +44,14 @@ Launcher:AddParagraph("WARNING!", "Versions that higher than 3.3, don't support 
 
 Launcher:AddDropdown({
 	Name = "Choose Version",
-	Default = "v3.5",
-	Options = {"v3.5", "v3.4", "v3.3", "v3.2", "v3.1", "v3.0"},
+	Default = "v3.6",
+	Options = {"v3.6", "v3.5", "v3.4", "v3.3", "v3.2", "v3.1", "v3.0"},
 	Callback = function(Value)
-if Value == "v3.5" then
+if Value == "v3.6" then
+wait(0.01)
+_G.Version = "v3.6"
+wait(0.01)
+elseif Value == "v3.5" then
 wait(0.01)
 _G.Version = "v3.5"
 wait(0.01)
@@ -77,13 +81,16 @@ end
 
 Launcher:AddParagraph("Launch Script", "Edit settings above if you want to, and then launch script!")
 
-Launcher:AddParagraph("WARNING!", "Hello! This is message from creator of this script. I won't able to upgrade it due to a vacation (yes I forgot source at home).")
-Launcher:AddParagraph("WARNING!", "This script will update in 03.01.2025. Have a nice day!")
+Launcher:AddParagraph("WARNING!", "Hello! I got ubh source, but im on vacation, so I will update ubh less. Thanks you for using my script.")
 
 Launcher:AddButton({
 	Name = "Launch Ultimate Badge Hub",
 	Callback = function()
-if _G.Version == "v3.5" then
+if _G.Version == "v3.6" then
+OrionLib:Destroy()
+wait(0.5)
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Pro666Pro/ubh-v3.6/refs/heads/main/Protected_9683456133622327.txt"))()
+elseif _G.Version == "v3.5" then
 OrionLib:Destroy()
 wait(0.5)
 loadstring(game:HttpGet("https://gist.githubusercontent.com/Pro666Pro/f9fbdcf69a215e728f70617839e91e6d/raw/8eea0b32d7a3dd75d4557c128026d8aad88b0e3b/main.lua"))()
