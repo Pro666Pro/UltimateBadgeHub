@@ -44,10 +44,18 @@ Launcher:AddParagraph("WARNING!", "Versions that higher than 3.3, don't support 
 
 Launcher:AddDropdown({
 	Name = "Choose Version",
-	Default = "v3.6",
-	Options = {"v3.6", "v3.5", "v3.4", "v3.3", "v3.2", "v3.1", "v3.0"},
+	Default = "v3.7",
+	Options = {"v3.7", "v3.6", "v3.5", "v3.4", "v3.3", "v3.2", "v3.1", "v3.0"},
 	Callback = function(Value)
-if Value == "v3.6" then
+-- using _G.Version = Value ??
+-- nah lol I'd like use something like this
+
+			
+if Value == "v3.7" then
+wait(0.01)
+_G.Version = "v3.7"
+wait(0.01)
+elseif Value == "v3.6" then
 wait(0.01)
 _G.Version = "v3.6"
 wait(0.01)
@@ -86,7 +94,11 @@ Launcher:AddParagraph("WARNING!", "Hello! I got ubh source, but im on vacation, 
 Launcher:AddButton({
 	Name = "Launch Ultimate Badge Hub",
 	Callback = function()
-if _G.Version == "v3.6" then
+if _G.Version == "v3.7" then
+OrionLib:Destroy()
+wait(0.5)
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Pro666Pro/ubh-v3.7-debug-beta/refs/heads/main/Protected_7577930750591352.txt"))()			
+elseif _G.Version == "v3.6" then
 OrionLib:Destroy()
 wait(0.5)
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Pro666Pro/ubh-v3.6/refs/heads/main/Protected_9683456133622327.txt"))()
