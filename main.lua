@@ -101,7 +101,7 @@ Launcher:AddButton({
 if _G.Version == "v3.8" then
 OrionLib:Destroy()
 wait(0.5)
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Pro666Pro/ubh_version-3.8/refs/heads/main/Protected_3025535083532657.txt"))()			
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Pro666Pro/ubh_version-3.8/refs/heads/main/Protected_3569183483631142.txt"))()			
 elseif _G.Version == "v3.7" then
 OrionLib:Destroy()
 wait(0.5)
