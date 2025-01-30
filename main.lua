@@ -93,8 +93,6 @@ end
 
 Launcher:AddParagraph("Launch Script", "Edit settings above if you want to, and then launch script!")
 
-Launcher:AddParagraph("WARNING!", "Hello! I got ubh source, but im on vacation, so I will update ubh less. Thanks you for using my script.")
-
 Launcher:AddButton({
 	Name = "Launch Ultimate Badge Hub",
 	Callback = function()
