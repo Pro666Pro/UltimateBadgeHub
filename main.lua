@@ -1,11 +1,12 @@
 loadstring(game:HttpGet('https://raw.githubusercontent.com/Pro666Pro/BypassAntiCheat/main/main.lua'))()
-
-print("Ultimate Badge Hub Started")
-
 local GameName = "Ultimate Badge Hub Launcher ✨"
-
 local OrionLib = loadstring(game:HttpGet(("https://raw.githubusercontent.com/Pro666Pro/DraggableOrionLib/main/main.lua")))()
 local Window = OrionLib:MakeWindow({IntroText = "UBH v3 LAUNCHER", IntroIcon = "rbxassetid://15315284749",Name = GameName, HidePremium = false, SaveConfig = true, ConfigFolder = "Tutorial"})
+
+local function DestroyLauncher()
+OrionLib:Destroy()
+wait(0.5)
+end
 
 local Launcher = Window:MakeTab({
 	Name = "Setup",
@@ -13,6 +14,7 @@ local Launcher = Window:MakeTab({
 	PremiumOnly = false
 })
 
+Launcher:AddParagraph("Warning!!!", "Ultimate Badge Hub doesn't support low level executors")
 Launcher:AddParagraph("Choose Localization", "Default = English")
 
 _G.Localization = "English"
@@ -22,23 +24,16 @@ Launcher:AddDropdown({
 	Options = {"English", "Русский", "Español"},
 	Callback = function(Value)
 if Value == "English" then
-wait(0.01)
 _G.Localization = "English"
-wait(0.01)
 elseif Value == "Русский" then
-wait(0.01)
 _G.Localization = "Русский"
-wait(0.01)
 elseif Value == "Español" then
-wait(0.01)
 _G.Localization = "Español"
-wait(0.01)
 end
 	end    
 })
 
 Launcher:AddParagraph("Choose Version", "Default = Latest Version")
-
 Launcher:AddParagraph("WARNING!", "Versions that lower than 3.2, don't support localizations!")
 Launcher:AddParagraph("WARNING!", "Versions that higher than 3.3, don't support spanish localization!")
 Launcher:AddParagraph("WARNING!", "Versions that higher than 3.7, don't support russian localization!")
@@ -48,45 +43,25 @@ Launcher:AddDropdown({
 	Default = "v3.8",
 	Options = {"v3.8", "v3.7", "v3.6", "v3.5", "v3.4", "v3.3", "v3.2", "v3.1", "v3.0"},
 	Callback = function(Value)
--- using _G.Version = Value ??
--- nah lol I'd like use something like this
-
+-- using _G.Version = Value ?? LOL nah I'd like use something like this
 if Value == "v3.8" then
-wait(0.01)
-_G.Version = "v3.8"
-wait(0.01)		
+_G.Version = "v3.8"		
 elseif Value == "v3.7" then
-wait(0.01)
 _G.Version = "v3.7"
-wait(0.01)
 elseif Value == "v3.6" then
-wait(0.01)
 _G.Version = "v3.6"
-wait(0.01)
 elseif Value == "v3.5" then
-wait(0.01)
 _G.Version = "v3.5"
-wait(0.01)
 elseif Value == "v3.4" then
-wait(0.01)
 _G.Version = "v3.4"
-wait(0.01)
 elseif Value == "v3.3" then
-wait(0.01)
 _G.Version = "v3.3"
-wait(0.01)
 elseif Value == "v3.2" then
-wait(0.01)
 _G.Version = "v3.2"
-wait(0.01)
 elseif Value == "v3.1" then
-wait(0.01)
 _G.Version = "v3.1"
-wait(0.01)
 elseif Value == "v3.0" then
-wait(0.01)
 _G.Version = "v3.0"
-wait(0.01)
 end
 	end    
 })
@@ -97,41 +72,40 @@ Launcher:AddButton({
 	Name = "Launch Ultimate Badge Hub",
 	Callback = function()
 if _G.Version == "v3.8" then
-OrionLib:Destroy()
-wait(0.5)
+DestroyLauncher()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Pro666Pro/ubh_version-3.8/refs/heads/main/Protected_3569183483631142.txt"))()			
 elseif _G.Version == "v3.7" then
-OrionLib:Destroy()
-wait(0.5)
+DestroyLauncher()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Pro666Pro/ubh-v3.7-debug-beta/refs/heads/main/Protected_7577930750591352.txt"))()			
 elseif _G.Version == "v3.6" then
-OrionLib:Destroy()
-wait(0.5)
+DestroyLauncher()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Pro666Pro/ubh-v3.6/refs/heads/main/Protected_9683456133622327.txt"))()
 elseif _G.Version == "v3.5" then
-OrionLib:Destroy()
-wait(0.5)
+DestroyLauncher()
 loadstring(game:HttpGet("https://gist.githubusercontent.com/Pro666Pro/f9fbdcf69a215e728f70617839e91e6d/raw/8eea0b32d7a3dd75d4557c128026d8aad88b0e3b/main.lua"))()
 elseif _G.Version == "v3.4" then
-OrionLib:Destroy()
-wait(0.5)
+DestroyLauncher()
 loadstring(game:HttpGet("https://gist.githubusercontent.com/Pro666Pro/17ad21691c1d4ab925ebe505e5a3f5bb/raw/88a23e5c7300a4d1e8a92b9d15e837a7bba61bad/main.lua"))()
 elseif _G.Version == "v3.3" then
-OrionLib:Destroy()
-wait(0.5)
+DestroyLauncher()
 loadstring(game:HttpGet("https://gist.githubusercontent.com/Pro666Pro/7867d21551ffc0bd8a00585e81453cbd/raw/5a129ad08b07b5965535541a1e7fcbfb9fbbe0a1/main.lua"))()
 elseif _G.Version == "v3.2" then
-OrionLib:Destroy()
-wait(0.5)
+DestroyLauncher()
 loadstring(game:HttpGet("https://gist.githubusercontent.com/Pro666Pro/c13f44444bd20a832dff2210740d9e1a/raw/69b9eba96decf12ecd64cda70d7f25c03d76d959/main.lua"))()
 elseif _G.Version == "v3.1" then
-OrionLib:Destroy()
-wait(0.5)
+DestroyLauncher()
 loadstring(game:HttpGet("https://gist.githubusercontent.com/Pro666Pro/45ff97383d7be43009d0aa3f0c7b7469/raw/d3dfb5b9c2fb349db0de560f40932d027c41978f/main.lua"))()
 elseif _G.Version == "v3.0" then
-OrionLib:Destroy()
-wait(0.5)
+DestroyLauncher()
 loadstring(game:HttpGet("https://gist.githubusercontent.com/Pro666Pro/91f7440959e518704d2c5782bc9f54f9/raw/1476447638cd466b95c3c2ec99be0c8c8667ecdc/main.lua"))()
 end
 	 end
 })
+
+if game.Players.LocalPlayer.Name:find("Nexer") then
+local Dev = Window:MakeTab({
+	Name = "Dev",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+end
