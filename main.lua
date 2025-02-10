@@ -40,11 +40,13 @@ Launcher:AddParagraph("WARNING!", "Versions that higher than 3.7, don't support 
 
 Launcher:AddDropdown({
 	Name = "Choose Version",
-	Default = "v3.9",
-	Options = {"v3.9", "v3.8", "v3.7", "v3.6", "v3.5", "v3.4", "v3.3", "v3.2", "v3.1", "v3.0"},
+	Default = "v4.0",
+	Options = {"v4.0", "v3.9", "v3.8", "v3.7", "v3.6", "v3.5", "v3.4", "v3.3", "v3.2", "v3.1", "v3.0"},
 	Callback = function(Value)
 -- using _G.Version = Value ?? LOL nah I'd like use something like this
-if Value == "v3.9" then
+if Value == "v4.0" then
+_G.Version = "v4.0"
+elseif Value == "v3.9" then
 _G.Version = "v3.9"
 elseif Value == "v3.8" then
 _G.Version = "v3.8"		
@@ -73,7 +75,10 @@ Launcher:AddParagraph("Launch Script", "Edit settings above if you want to, and 
 Launcher:AddButton({
 	Name = "Launch Ultimate Badge Hub",
 	Callback = function()
-if _G.Version == "v3.9" then
+if _G.Version == "v4.0" then
+DestroyLauncher()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Pro666Pro/ubh-v4-finallylol/refs/heads/main/Protected_3213696534361476.txt"))()
+elseif _G.Version == "v3.9" then
 DestroyLauncher()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Pro666Pro/BroCanIUseYourUBH-v3.9/refs/heads/main/Protected_2278331425323228.txt"))()
 elseif _G.Version == "v3.8" then
@@ -106,11 +111,3 @@ loadstring(game:HttpGet("https://gist.githubusercontent.com/Pro666Pro/91f7440959
 end
 	 end
 })
-
-if game.Players.LocalPlayer.Name:find("Nexer") then
-local Dev = Window:MakeTab({
-	Name = "Dev",
-	Icon = "rbxassetid://4483345998",
-	PremiumOnly = false
-})
-end
