@@ -14,7 +14,7 @@ local Launcher = Window:MakeTab({
 	PremiumOnly = false
 })
 
-Launcher:AddParagraph("Warning!!!", "Ultimate Badge Hub doesn't support low level executors")
+Launcher:AddParagraph("Warning!!!", "Ultimate Badge Hub doesn't support low level executors!")
 Launcher:AddParagraph("Choose Localization", "Default = English")
 
 _G.Localization = "English"
@@ -34,9 +34,7 @@ end
 })
 
 Launcher:AddParagraph("Choose Version", "Default = Latest Version")
-Launcher:AddParagraph("WARNING!", "Versions that lower than 3.2, don't support localizations!")
-Launcher:AddParagraph("WARNING!", "Versions that higher than 3.3, don't support spanish localization!")
-Launcher:AddParagraph("WARNING!", "Versions that higher than 3.7, don't support russian localization!")
+Launcher:AddParagraph("WARNING!", "Versions that lower than 3.2, don't support localizations! & Versions that higher than 3.3, don't support spanish localization! & Versions that higher than 3.7, don't support russian localization!")
 
 Launcher:AddDropdown({
 	Name = "Choose Version",
