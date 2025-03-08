@@ -1,3 +1,8 @@
+local function somethingimportant()
+getgenv().gethui = function() return game.CoreGui end
+task.wait(1)
+end
+somethingimportant()
 loadstring(game:HttpGet('https://raw.githubusercontent.com/Pro666Pro/BypassAntiCheat/main/main.lua'))()
 local GameName = "Ultimate Badge Hub Launcher ✨"
 local OrionLib = loadstring(game:HttpGet(("https://raw.githubusercontent.com/Pro666Pro/DraggableOrionLib/main/main.lua")))()
@@ -6,6 +11,7 @@ local Window = OrionLib:MakeWindow({IntroText = "UBH v3 LAUNCHER", IntroIcon = "
 local function DestroyLauncher()
 OrionLib:Destroy()
 wait(0.5)
+somethingimportant()
 end
 
 local Launcher = Window:MakeTab({
