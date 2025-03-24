@@ -44,11 +44,13 @@ Launcher:AddParagraph("WARNING!", "Versions that lower than 3.2, don't support l
 
 Launcher:AddDropdown({
 	Name = "Choose Version",
-	Default = "v4.0",
-	Options = {"v4.0", "v3.9", "v3.8", "v3.7", "v3.6", "v3.5", "v3.4", "v3.3", "v3.2", "v3.1", "v3.0"},
+	Default = "v4.1 - Reborn",
+	Options = {"v4.1 - Reborn", "v4.0", "v3.9", "v3.8", "v3.7", "v3.6", "v3.5", "v3.4", "v3.3", "v3.2", "v3.1", "v3.0"},
 	Callback = function(Value)
 -- using _G.Version = Value ?? LOL nah I'd like use something like this
-if Value == "v4.0" then
+if Value == "v4.1 - Reborn" then
+_G.Version = "v4.1 - Reborn"
+elseif Value == "v4.0" then
 _G.Version = "v4.0"
 elseif Value == "v3.9" then
 _G.Version = "v3.9"
@@ -79,7 +81,10 @@ Launcher:AddParagraph("Launch Script", "Edit settings above if you want to, and 
 Launcher:AddButton({
 	Name = "Launch Ultimate Badge Hub",
 	Callback = function()
-if _G.Version == "v4.0" then
+if _G.Version == "v4.1 - Reborn" then
+DestroyLauncher()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Pro666Pro/UltimateBadgeHub/refs/heads/main/UBHv4.1REBORN"))()
+elseif _G.Version == "v4.0" then
 DestroyLauncher()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Pro666Pro/ubh-v4-finallylol/refs/heads/main/Protected_3213696534361476.txt"))()
 elseif _G.Version == "v3.9" then
