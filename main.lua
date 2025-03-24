@@ -83,7 +83,7 @@ Launcher:AddButton({
 	Callback = function()
 if _G.Version == "v4.1 - Reborn" then
 DestroyLauncher()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Pro666Pro/UltimateBadgeHub/refs/heads/main/UBHv4.1REBORN"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Pro666Pro/UltimateBadgeHub/refs/heads/main/UBHv4.1REBORN.luau"))()
 elseif _G.Version == "v4.0" then
 DestroyLauncher()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Pro666Pro/ubh-v4-finallylol/refs/heads/main/Protected_3213696534361476.txt"))()
