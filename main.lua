@@ -20,6 +20,14 @@ local Launcher = Window:MakeTab({
 	PremiumOnly = false
 })
 
+local Changelogs = Window:MakeTab({
+	Name = "Changelogs",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Changelogs:AddParagraph("v4.3 Reborn", "What's new? Now credits and support tabs are in all types of ubh! Fixed bug where ubh couldn't load. Added auto get tank. Fixed more bugs and added custom buttons :>")
+
 Launcher:AddParagraph("Warning!!!", "Ultimate Badge Hub doesn't support low level executors!")
 Launcher:AddParagraph("Choose Localization", "Default = English")
 
@@ -44,11 +52,13 @@ Launcher:AddParagraph("WARNING!", "Versions that lower than 3.2, don't support l
 
 Launcher:AddDropdown({
 	Name = "Choose Version",
-	Default = "v4.2 - Reborn",
-	Options = {"v4.2 - Reborn", "v4.1 - Reborn", "v4.0", "v3.9", "v3.8", "v3.7", "v3.6", "v3.5", "v3.4", "v3.3", "v3.2", "v3.1", "v3.0"},
+	Default = "v4.3 - Reborn",
+	Options = {"v4.3 - Reborn", "v4.2 - Reborn", "v4.1 - Reborn", "v4.0", "v3.9", "v3.8", "v3.7", "v3.6", "v3.5", "v3.4", "v3.3", "v3.2", "v3.1", "v3.0"},
 	Callback = function(Value)
 -- using _G.Version = Value ?? LOL nah I'd like use something like this
-if Value == "v4.2 - Reborn" then
+if Value == "v4.3 - Reborn" then
+_G.Version = "v4.3 - Reborn"
+elseif Value == "v4.2 - Reborn" then
 _G.Version = "v4.2 - Reborn"
 elseif Value == "v4.1 - Reborn" then
 _G.Version = "v4.1 - Reborn"
@@ -83,7 +93,10 @@ Launcher:AddParagraph("Launch Script", "Edit settings above if you want to, and 
 Launcher:AddButton({
 	Name = "Launch Ultimate Badge Hub",
 	Callback = function()
-if _G.Version == "v4.2 - Reborn" then
+if _G.Version == "v4.3 - Reborn" then
+DestroyLauncher()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Pro666Pro/UltimateBadgeHub/refs/heads/main/ubh-but-this-is-v4.3.lua"))()
+elseif _G.Version == "v4.2 - Reborn" then
 DestroyLauncher()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Pro666Pro/UltimateBadgeHub/refs/heads/main/version4.2.luau"))()
 elseif _G.Version == "v4.1 - Reborn" then
