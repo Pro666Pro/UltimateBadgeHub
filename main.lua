@@ -3,7 +3,9 @@ getgenv().gethui = function() return game.CoreGui end
 task.wait(1)
 end
 somethingimportant()
+pcall(function()
 loadstring(game:HttpGet('https://raw.githubusercontent.com/Pro666Pro/BypassAntiCheat/main/main.lua'))()
+end)
 local GameName = "Ultimate Badge Hub Launcher ✨"
 local OrionLib = loadstring(game:HttpGet(("https://raw.githubusercontent.com/Pro666Pro/DraggableOrionLib/main/main.lua")))()
 local Window = OrionLib:MakeWindow({IntroText = "UBH LAUNCHER", IntroIcon = "rbxassetid://15315284749",Name = GameName, HidePremium = false, SaveConfig = true, ConfigFolder = "Tutorial"})
